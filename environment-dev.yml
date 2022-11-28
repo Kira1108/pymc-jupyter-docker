@@ -1,0 +1,55 @@
+# "dev" conda envs are to be used by devs in setting their local environments
+name: pymc-dev
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+dependencies:
+# Base dependencies
+- aeppl=0.0.38
+- aesara=2.8.7
+- arviz>=0.13.0
+- blas
+- cachetools>=4.2.1
+- cloudpickle
+- fastprogress>=0.2.0
+- h5py>=2.7
+- numpy>=1.15.0
+- pandas>=0.24.0
+- pip
+- python-graphviz
+- networkx
+- scipy>=1.4.1
+- typing-extensions>=3.7.4
+# Extra dependencies for dev, testing and docs build
+- ipython>=7.16
+- jax
+- jupyter-sphinx
+- myst-nb
+- numpydoc
+- pre-commit>=2.8.0
+- pytest-cov>=2.5
+- pytest>=3.0
+- sphinx-copybutton
+- sphinx-design
+- sphinx-notfound-page
+- sphinx>=1.5
+- sphinxext-rediraffe
+- watermark
+- polyagamma
+- sphinx-remove-toctrees
+- mypy=0.990
+- types-cachetools
+- pip:
+  - git+https://github.com/pymc-devs/pymc-sphinx-theme
